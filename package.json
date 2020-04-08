@@ -1,0 +1,33 @@
+{
+  "name": "@tailwindjs/react-tailwindjs",
+  "version": "0.1.0",
+  "description": "Dynamic components for Tailwindcss and ReactJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tailwindjs/react-tailwindjs.git"
+  },
+  "keywords": [
+    "react",
+    "tailwind",
+    "tailwindcss",
+    "package",
+    "components",
+    "framework",
+    "tailwind-framework",
+    "react-framework",
+    "react-tailwind",
+    "react-tailwindcss",
+    "react-tailwindjs",
+    "tailwindjs"
+  ],
+  "author": "@tailwindjs",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tailwindjs/react-tailwindjs/issues"
+  },
+  "homepage": "https://github.com/tailwindjs/react-tailwindjs#readme"
+}
