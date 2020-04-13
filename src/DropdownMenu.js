@@ -24,23 +24,25 @@ const colorSchemes = {
   pink: "bg-pink-500 border-pink-400"
 };
 
-const DropdownMenu = React.forwardRef(({ placement, show, children, color },ref) => {
-  return (
-    <>
-      <div
-        ref={ref}
-        className={classnames(
-          "absolute left-0 z-50 py-2 text-base text-left list-none border border-solid rounded",
-          colorSchemes[color],
-          margins[placement],
-          { hidden: !show, block: show }
-        )}
-      >
-        {children}
-      </div>
-    </>
-  );
-});
+const DropdownMenu = React.forwardRef(
+  ({ placement, show, children, color }, ref) => {
+    return (
+      <>
+        <div
+          ref={ref}
+          className={classnames(
+            "absolute left-0 z-50 py-2 text-base text-left list-none border border-solid rounded",
+            colorSchemes[color],
+            margins[placement],
+            { hidden: !show, block: show }
+          )}
+        >
+          {children}
+        </div>
+      </>
+    );
+  }
+);
 
 DropdownMenu.defaultProps = {
   show: false,

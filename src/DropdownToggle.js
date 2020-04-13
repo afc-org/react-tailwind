@@ -17,7 +17,7 @@ const colorSchemes = {
   pink: "bg-pink-500 text-white active:bg-pink-600"
 };
 
-const DropdownToggle = React.forwardRef(({ children, color, ...rest },ref) => {
+const DropdownToggle = React.forwardRef(({ children, color, ...rest }, ref) => {
   return (
     <>
       <button
