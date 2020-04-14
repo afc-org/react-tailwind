@@ -10,18 +10,18 @@ const margins = {
 };
 
 const colorSchemes = {
-  black: "bg-black border-gray-900",
-  white: "bg-white border-gray-100",
-  gray: "bg-gray-500 border-gray-400",
-  red: "bg-red-500 border-gray-400",
-  orange: "bg-orange-500 border-orange-400",
-  yellow: "bg-yellow-500 border-yellow-400",
-  green: "bg-green-500 border-green-400",
-  teal: "bg-teal-500 border-teal-400",
-  blue: "bg-blue-500 border-blue-400",
-  indigo: "bg-indigo-500 border-indigo-400",
-  purple: "bg-purple-500 border-purple-400",
-  pink: "bg-pink-500 border-pink-400"
+  black: "bg-black border-gray-900 text-white",
+  white: "bg-white border-gray-100 text-gray-100",
+  gray: "bg-gray-500 border-gray-600 text-white",
+  red: "bg-red-500 border-gray-600 text-white",
+  orange: "bg-orange-500 border-orange-600 text-white",
+  yellow: "bg-yellow-500 border-yellow-600 text-white",
+  green: "bg-green-500 border-green-600 text-white",
+  teal: "bg-teal-500 border-teal-600 text-white",
+  blue: "bg-blue-500 border-blue-600 text-white",
+  indigo: "bg-indigo-500 border-indigo-600 text-white",
+  purple: "bg-purple-500 border-purple-600 text-white",
+  pink: "bg-pink-500 border-pink-600 text-white"
 };
 
 const DropdownMenu = React.forwardRef(
