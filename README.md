@@ -93,7 +93,7 @@ export default function YourFunctionName() {
 import React from "react";
 import { Alert } from "@tailwindjs/react-tailwindjs";
 // or direct import
-// import Alert from "@tailwindjs/react-tailwindjs/Alert";
+// import Alert from "@tailwindjs/react-tailwindjs/src/Alert";
 
 // With Function Components (hooks)
 export default function YourFunctionName() {
@@ -153,6 +153,157 @@ Alert.propTypes = {
 ```
 
 ### Dropdown
+
+Usage:
+
+```
+// uncontrolled usage
+import React from "react";
+import {
+  Dropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem
+} from "@tailwindjs/react-tailwindjs";
+
+const YourComponent = () => {
+  return (
+      <Dropdown>
+        <DropdownToggle color="dark">
+          Dropdown
+        </DropdownToggle>
+        <DropdownMenu color="blue">
+          <DropdownItem>Item 1</DropdownItem>
+          <DropdownItem>Item 2</DropdownItem>
+          <DropdownItem divider />
+          <DropdownItem>Item 3</DropdownItem>
+        </DropdownMenu>
+      </Dropdown>
+    );
+}
+
+export default YourComponent;
+
+// controlled usage
+import React from "react";
+import {
+  Dropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem
+} from "@tailwindjs/react-tailwindjs";
+
+const YourComponent = () => {
+  const [show,setShow] = React.useState(false);
+  return (
+      <Dropdown controlled>
+        <DropdownToggle color="black" onClick={() => setShow(!show)}>
+          Dropdown
+        </DropdownToggle>
+        <DropdownMenu color="blue" show={show}>
+          <DropdownItem>Item 1</DropdownItem>
+          <DropdownItem>Item 2</DropdownItem>
+          <DropdownItem divider />
+          <DropdownItem>Item 3</DropdownItem>
+        </DropdownMenu>
+      </Dropdown>
+    );
+}
+
+export default YourComponent;
+```
+
+Props:
+
+```
+Dropdown.defaultProps = {
+  placement: "bottom"
+};
+
+Dropdown.propTypes = {
+  // where the Dropdown should be rendered
+  // NOTE: if there is no place for the dropdown to be rendered
+  //    on the choosen placement, PopperJS will rendered it
+  //    where it has place
+  placement: PropTypes.oneOf(["top", "bottom", "left", "right"]),
+  // when using the uncontrolled version
+  // you need to send exactly two children
+  // - DropdownToggle
+  // and
+  // - DropdownMenu
+  // if you fail to do so, an error will be thrown
+  children: PropTypes.node.isRequired
+};
+
+DropdownToggle.defaultProps = {
+  color: "pink"
+};
+
+DropdownToggle.propTypes = {
+  // set the background
+  color: PropTypes.oneOf([
+    "black",
+    "white",
+    "gray",
+    "red",
+    "orange",
+    "yellow",
+    "green",
+    "teal",
+    "blue",
+    "indigo",
+    "purple",
+    "pink"
+  ])
+};
+
+DropdownMenu.defaultProps = {
+  show: false,
+  placement: "top",
+  color: "white"
+};
+
+DropdownMenu.propTypes = {
+  // make the menu hidden or visible
+  show: PropTypes.bool,
+  // where the DropdownMenu should be rendered
+  // NOTE: if there is no place for the dropdown menu to be rendered
+  //    on the choosen placement, PopperJS will rendered it
+  //    where it has place
+  placement: PropTypes.oneOf(["top", "bottom", "left", "right"]),
+  // set the background
+  color: PropTypes.oneOf([
+    "black",
+    "white",
+    "gray",
+    "red",
+    "orange",
+    "yellow",
+    "green",
+    "teal",
+    "blue",
+    "indigo",
+    "purple",
+    "pink"
+  ])
+};
+
+DropdownItem.defaultProps = {
+  divider: false,
+  disabled: false,
+  light: true,
+  dark: false,
+  children: null
+};
+
+DropdownItem.propTypes = {
+  // this will make the component to be rendered as a divider line
+  divider: PropTypes.bool,
+  // this will make the component to not be clickable
+  disabled: PropTypes.bool,
+  children: PropTypes.node
+};
+```
 
 
 ### Styles
