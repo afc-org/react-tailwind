@@ -35,6 +35,7 @@ We plan on implementing more, in the weeks to come.
 ## Components
 
 - [Alert](#alert)
+- [Button](#button)
 - [Dropdown](#dropdown)
 - Responsive Menu
 - Modal
@@ -53,7 +54,7 @@ npm i -E @tailwindjs/react-tailwindjs
 
 After you have installed `@tailwindjs/react-tailwindjs` into your project, you can import and use our components like so:
 
-### Alerts
+### Alert
 
 Usage:
 
@@ -150,6 +151,51 @@ Alert.propTypes = {
   icon: PropTypes.string,
   children: PropTypes.node.isRequired
 };
+```
+
+### Button
+
+Usage:
+
+```
+import React from "react";
+import { Button } from "@tailwindjs/react-tailwindjs";
+
+// With Function Components (hooks)
+export default function YourFunctionName() {
+  return (
+    <>
+      <Button color="pink">Buton text</Button>
+    </>
+  );
+}
+```
+
+Props:
+
+```
+Button.defaultProps = {
+  color: "pink"
+};
+
+Button.propTypes = {
+  // set the background, border and text color
+  color: PropTypes.oneOf([
+    "black",
+    "white",
+    "gray",
+    "red",
+    "orange",
+    "yellow",
+    "green",
+    "teal",
+    "blue",
+    "indigo",
+    "purple",
+    "pink"
+  ]),
+  children: PropTypes.node
+}
 ```
 
 ### Dropdown
