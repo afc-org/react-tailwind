@@ -5,8 +5,6 @@ import classnames from "classnames";
 const DropdownItem = ({
   divider,
   children,
-  light,
-  dark,
   disabled,
   ...rest
 }) => {
@@ -16,9 +14,7 @@ const DropdownItem = ({
     );
   }
   let classes = classnames(
-    "block w-full py-1 px-6 clear-both font-normal whitespace-no-wrap bg-transparent border-0",
-    { "text-gray-800 hover:text-gray-900": light && !disabled },
-    { "text-white hover:text-gray-100": dark && !light && !disabled },
+    "block w-full py-1 px-6 clear-both font-normal whitespace-no-wrap bg-transparent border-0 hover:opacity-75 cursor-pointer",
     { "text-gray-400 pointer-events-none": disabled }
   );
   return (
@@ -33,8 +29,6 @@ const DropdownItem = ({
 DropdownItem.defaultProps = {
   divider: false,
   disabled: false,
-  light: true,
-  dark: false,
   children: null
 };
 
@@ -43,12 +37,6 @@ DropdownItem.propTypes = {
   divider: PropTypes.bool,
   // this will make the component to not be clickable
   disabled: PropTypes.bool,
-  // this prop is used to determine whether the item should be rendered for
-  // a light background or not - i.e. it should have darker font colors
-  light: PropTypes.bool,
-  // this prop is used to determine whether the item should be rendered for
-  // a darker background or not - i.e. it should have lighter font colors
-  dark: PropTypes.bool,
   children: PropTypes.node
 };
 
