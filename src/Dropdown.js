@@ -4,12 +4,8 @@ import { createPopper } from "@popperjs/core";
 
 const Dropdown = ({ controlled, placement, children }) => {
   const [show, setShow] = React.useState(false);
-  if(controlled) {
-    return (
-      <div className="relative">
-        {children}
-      </div>
-    );
+  if (controlled) {
+    return <div className="relative">{children}</div>;
   } else {
     const toggleDropdown = () => {
       if (!show) {
