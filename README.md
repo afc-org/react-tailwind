@@ -368,7 +368,7 @@ import {
   ModalFooter,
   ModalHead,
   ModalTitle
-} from "./src";
+} from "@tailwindjs/react-tailwindjs";
 
 const YourComponent = () => {
   const [show, setShow] = React.useState(false);
