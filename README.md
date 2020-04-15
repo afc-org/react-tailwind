@@ -358,7 +358,7 @@ Usage:
 ```
 // controlled usage
 import React from "react";
-import { Button, Popover, PopoverHead, PopoverBody } from "./src";
+import { Button, Popover, PopoverHead, PopoverBody } from "@tailwindjs/react-tailwindjs";
 
 const YourComponent = () => {
   const [show, setShow] = React.useState(false);
@@ -446,7 +446,7 @@ Usage:
 ```
 // controlled usage
 import React from "react";
-import { Button, Tooltip } from "./src";
+import { Button, Tooltip } from "@tailwindjs/react-tailwindjs";
 
 const YourComponent = () => {
   const [show, setShow] = React.useState(false);
