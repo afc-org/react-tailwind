@@ -8,7 +8,7 @@
 
 Tailwindjs/react-tailwindjs is Free and Open Source. It does not change or add any CSS to the already one from TailwindCSS, It comes with code written with React as an extension to TailwindCSS for you to have dynamic components inside your app as well.
 
-### Components
+**Components**
 
 It comes with 8 dynamic components, that any website needs.
 We plan on implementing more, in the weeks to come.
@@ -38,7 +38,7 @@ We plan on implementing more, in the weeks to come.
 - [Button](#button)
 - [Dropdown](#dropdown)
 - Responsive Menu
-- Modal
+- [Modal](modal)
 - Responsive Navbar
 - [Popover](#popover)
 - [Tooltip](#tooltip)
@@ -351,6 +351,136 @@ DropdownItem.propTypes = {
 };
 ```
 
+### Menu
+
+### Modal
+
+Usage:
+
+```
+import React from "react";
+import {
+  Button,
+  Modal,
+  ModalBody,
+  ModalContent,
+  ModalDialog,
+  ModalFooter,
+  ModalHead,
+  ModalTitle
+} from "@tailwindjs/react-tailwindjs";
+
+const YourComponent = () => {
+  const [show, setShow] = React.useState(false);
+  return (
+    <>
+      {/* Uncontrolled version */}
+      <Button color="pink" onClick={() => setShow(!show)}>
+        Open Modal
+      </Button>
+      <Modal show={show}>
+        <ModalDialog>
+          <ModalContent>
+            <ModalHead>
+              <ModalTitle>This is the modal title, yo</ModalTitle>
+              <button
+                type="button"
+                onClick={() => setShow(!show)}
+                className="float-right text-2xl font-bold text-black leading-none bg-transparent border-0 opacity-50 p-4 -mr-4 -mt-4 -mb-4 ml-auto cursor-pointer"
+              >
+                <span aria-hidden="true">×</span>
+              </button>
+            </ModalHead>
+            <ModalBody>
+              <p className="mb-100">
+                A long time ago in a galaxy far, far away....
+              </p>
+              <p className="mb-100">
+                The Normy Modal was just a normal-sized modal, working for the
+                better of the empire, day by day, being a loyal soldier, not
+                asking any questions, doing his part for empowering the empire.
+              </p>
+            </ModalBody>
+            <ModalFooter>
+              <Button color="pink" onClick={() => setShow(!show)}>
+                Save changes
+              </Button>
+              <Button color="gray" onClick={() => setShow(!show)}>
+                Close
+              </Button>
+            </ModalFooter>
+          </ModalContent>
+        </ModalDialog>
+      </Modal>
+    </>
+  );
+};
+
+export default YourComponent;
+```
+
+Props:
+
+```
+Modal.defaultProps = {
+  show: false
+};
+
+Modal.propTypes = {
+  // send true to it to open the modal
+  show: PropTypes.bool,
+  children: PropTypes.node
+};
+
+
+ModalBody.defaultProps = {};
+
+ModalBody.propTypes = {
+  children: PropTypes.node
+};
+
+
+ModalContent.defaultProps = {};
+
+ModalContent.propTypes = {
+  children: PropTypes.node
+};
+
+
+ModalDialog.defaultProps = {
+  size: "default"
+};
+
+ModalDialog.propTypes = {
+  // size of the modal
+  size: PropTypes.oneOf(["sm", "lg", "xl", "default"]),
+  children: PropTypes.node
+};
+
+
+ModalFooter.defaultProps = {};
+
+ModalFooter.propTypes = {
+  children: PropTypes.node
+};
+
+
+ModalHead.defaultProps = {};
+
+ModalHead.propTypes = {
+  children: PropTypes.node
+};
+
+
+ModalTitle.defaultProps = {};
+
+ModalTitle.propTypes = {
+  children: PropTypes.node
+};
+```
+
+### Navbar
+
 ### Popover
 
 Usage:
@@ -358,7 +488,7 @@ Usage:
 ```
 // controlled usage
 import React from "react";
-import { Button, Popover, PopoverHead, PopoverBody } from "./src";
+import { Button, Popover, PopoverHead, PopoverBody } from "@tailwindjs/react-tailwindjs";
 
 const YourComponent = () => {
   const [show, setShow] = React.useState(false);
@@ -446,7 +576,7 @@ Usage:
 ```
 // controlled usage
 import React from "react";
-import { Button, Tooltip } from "./src";
+import { Button, Tooltip } from "@tailwindjs/react-tailwindjs";
 
 const YourComponent = () => {
   const [show, setShow] = React.useState(false);
