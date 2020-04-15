@@ -11,6 +11,14 @@ import ModalDialog from "./ModalDialog.js";
 import ModalFooter from "./ModalFooter.js";
 import ModalHead from "./ModalHead.js";
 import ModalTitle from "./ModalTitle.js";
+import Navbar from "./Navbar.js";
+import NavbarBrand from "./NavbarBrand.js";
+import NavbarCollapse from "./NavbarCollapse.js";
+import NavbarContainer from "./NavbarContainer.js";
+import NavbarItem from "./NavbarItem.js";
+import NavbarLink from "./NavbarLink.js";
+import NavbarNav from "./NavbarNav.js";
+import NavbarToggler from "./NavbarToggler.js";
 import Popover from "./Popover.js";
 import PopoverHead from "./PopoverHead.js";
 import PopoverBody from "./PopoverBody.js";
@@ -30,6 +38,14 @@ export {
   ModalFooter,
   ModalHead,
   ModalTitle,
+  Navbar,
+  NavbarBrand,
+  NavbarCollapse,
+  NavbarContainer,
+  NavbarItem,
+  NavbarLink,
+  NavbarNav,
+  NavbarToggler,
   Popover,
   PopoverHead,
   PopoverBody,
