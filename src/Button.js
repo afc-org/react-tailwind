@@ -29,10 +29,11 @@ const colorSchemes = {
     "bg-pink-600 border border-solid border-pink-600 hover:bg-pink-700 hover:border-pink-800 active:bg-pink-700 active:border-pink-800 text-white"
 };
 
-const Button = React.forwardRef(({ color, children }, ref) => {
+const Button = React.forwardRef(({ color, children, ...rest }, ref) => {
   return (
     <>
       <button
+        {...rest}
         className={classnames(
           "rounded font-normal outline-none focus:outline-none align-middle text-base px-3 py-2 leading-tight",
           colorSchemes[color]
