@@ -37,9 +37,9 @@ We plan on implementing more, in the weeks to come.
 - [Alert](#alert)
 - [Button](#button)
 - [Dropdown](#dropdown)
-- Responsive Menu
-- [Modal](modal)
-- Responsive Navbar
+- [Menu](#menu)
+- [Modal](#modal)
+- [Navbar](#navbar)
 - [Popover](#popover)
 - [Tooltip](#tooltip)
 - Tab Pills
@@ -353,6 +353,9 @@ DropdownItem.propTypes = {
 
 ### Menu
 
+This component is integrated in the [Navbar one](#navbar).
+Please check that component to see how you can get nice React & Tailwind menus in your app.
+
 ### Modal
 
 Usage:
@@ -480,6 +483,205 @@ ModalTitle.propTypes = {
 ```
 
 ### Navbar
+
+Usage:
+
+```
+// uncontrolled version
+import React from "react";
+import {
+  Navbar,
+  NavbarBrand,
+  NavbarCollapse,
+  NavbarContainer,
+  NavbarItem,
+  NavbarLink,
+  NavbarNav,
+  NavbarToggler
+} from "./src";
+
+const YourComponent = () => {
+  return (
+    <>
+      <Navbar color="pink">
+        <NavbarContainer>
+          <NavbarBrand>Brand text here</NavbarBrand>
+          <NavbarToggler expand="lg" id="pink-navbar-toggler">
+            <span aria-hidden="true">⁝⁝⁝</span>
+          </NavbarToggler>
+          <NavbarCollapse expand="lg" toggler="#pink-navbar-toggler">
+            <NavbarNav expand="lg">
+              <NavbarItem>
+                <NavbarLink active>Active Link</NavbarLink>
+              </NavbarItem>
+              <NavbarItem>
+                <NavbarLink>Simple Link</NavbarLink>
+              </NavbarItem>
+              <NavbarItem>
+                <NavbarLink disabled>Disabled Link</NavbarLink>
+              </NavbarItem>
+            </NavbarNav>
+          </NavbarCollapse>
+        </NavbarContainer>
+      </Navbar>
+    </>
+  );
+};
+
+export default YourComponent;
+
+// controlled version
+import React from "react";
+import {
+  Navbar,
+  NavbarBrand,
+  NavbarCollapse,
+  NavbarContainer,
+  NavbarItem,
+  NavbarLink,
+  NavbarNav,
+  NavbarToggler
+} from "./src";
+
+const YourComponent = () => {
+  const [show, setShow] = React.useState(false);
+  return (
+    <>
+      <Navbar color="pink">
+        <NavbarContainer>
+          <NavbarBrand>Brand text here</NavbarBrand>
+          <NavbarToggler expand="lg" onClick={() => setShow(!show)}>
+            <span aria-hidden="true">⁝⁝⁝</span>
+          </NavbarToggler>
+          <NavbarCollapse expand="lg" controlled show={show}>
+            <NavbarNav expand="lg">
+              <NavbarItem>
+                <NavbarLink active>Active Link</NavbarLink>
+              </NavbarItem>
+              <NavbarItem>
+                <NavbarLink>Simple Link</NavbarLink>
+              </NavbarItem>
+              <NavbarItem>
+                <NavbarLink disabled>Disabled Link</NavbarLink>
+              </NavbarItem>
+            </NavbarNav>
+          </NavbarCollapse>
+        </NavbarContainer>
+      </Navbar>
+    </>
+  );
+};
+
+export default YourComponent;
+```
+
+Props:
+
+```
+Navbar.defaultProps = {
+  color: "pink",
+  menu: false
+};
+
+Navbar.propTypes = {
+  // if you do not want to use this component as a navbar,
+  // but as a small menu someplace in your page,
+  // you can add the menu prop on it
+  menu: PropTypes.bool,
+  // set the background and text color
+  color: PropTypes.oneOf([
+    "black",
+    "white",
+    "gray",
+    "red",
+    "orange",
+    "yellow",
+    "green",
+    "teal",
+    "blue",
+    "indigo",
+    "purple",
+    "pink"
+  ]),
+  children: PropTypes.node
+};
+
+
+NavbarBrand.defaultProps = {};
+
+NavbarBrand.propTypes = {
+  children: PropTypes.node
+};
+
+
+NavbarCollapse.defaultProps = {
+  show: false,
+  controlled: false
+};
+
+NavbarCollapse.propTypes = {
+  // if you want to controll yourself the opening and closing of the collapse
+  show: PropTypes.bool,
+  controlled: PropTypes.bool,
+  // for controlled version,
+  // you need to pass this so that the component can be opnened and closed
+  // it has to come like "#toggler-id", where toggler-id can be any string
+  toggler: PropTypes.string,
+  // on which breakpoint should collapse be hidden
+  expand: PropTypes.oneOf(["sm", "md", "lg", "xl"]),
+  children: PropTypes.node
+};
+
+
+NavbarContainer.defaultProps = {
+  size: "fluid"
+};
+
+NavbarContainer.propTypes = {
+  // set how large should the container be
+  size: PropTypes.oneOf(["sm", "md", "lg", "xl", "fluid"]),
+  children: PropTypes.node
+};
+
+
+NavbarItem.defaultProps = {};
+
+NavbarItem.propTypes = {
+  children: PropTypes.node
+};
+
+
+NavbarLink.defaultProps = {
+  active: false,
+  disabled: false
+};
+
+NavbarLink.propTypes = {
+  // for active state
+  active: PropTypes.bool,
+  // for disabled state
+  disabled: PropTypes.bool,
+  children: PropTypes.node
+};
+
+
+NavbarNav.defaultProps = {};
+
+NavbarNav.propTypes = {
+  // from which breakpoint should the items be set in row (inline)
+  expand: PropTypes.oneOf(["sm", "md", "lg", "xl"]),
+  children: PropTypes.node
+};
+
+
+NavbarToggler.defaultProps = {};
+
+NavbarToggler.propTypes = {
+  // from which breakpoint should toggler be hidden
+  expand: PropTypes.oneOf(["sm", "md", "lg", "xl"]),
+  children: PropTypes.node
+};
+```
 
 ### Popover
 
