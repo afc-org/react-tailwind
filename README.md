@@ -35,12 +35,13 @@ We plan on implementing more, in the weeks to come.
 ## Components
 
 - [Alert](#alert)
+- [Button](#button)
 - [Dropdown](#dropdown)
 - Responsive Menu
 - Modal
 - Responsive Navbar
-- Popover (PopperJS)
-- Tooltip (PopperJS)
+- [Popover](#popover)
+- [Tooltip](#tooltip)
 - Tab Pills
 
 ## Quick start
@@ -53,7 +54,7 @@ npm i -E @tailwindjs/react-tailwindjs
 
 After you have installed `@tailwindjs/react-tailwindjs` into your project, you can import and use our components like so:
 
-### Alerts
+### Alert
 
 Usage:
 
@@ -150,6 +151,51 @@ Alert.propTypes = {
   icon: PropTypes.string,
   children: PropTypes.node.isRequired
 };
+```
+
+### Button
+
+Usage:
+
+```
+import React from "react";
+import { Button } from "@tailwindjs/react-tailwindjs";
+
+// With Function Components (hooks)
+export default function YourFunctionName() {
+  return (
+    <>
+      <Button color="pink">Buton text</Button>
+    </>
+  );
+}
+```
+
+Props:
+
+```
+Button.defaultProps = {
+  color: "pink"
+};
+
+Button.propTypes = {
+  // set the background, border and text color
+  color: PropTypes.oneOf([
+    "black",
+    "white",
+    "gray",
+    "red",
+    "orange",
+    "yellow",
+    "green",
+    "teal",
+    "blue",
+    "indigo",
+    "purple",
+    "pink"
+  ]),
+  children: PropTypes.node
+}
 ```
 
 ### Dropdown
@@ -301,6 +347,165 @@ DropdownItem.propTypes = {
   divider: PropTypes.bool,
   // this will make the component to not be clickable
   disabled: PropTypes.bool,
+  children: PropTypes.node
+};
+```
+
+### Popover
+
+Usage:
+
+```
+// controlled usage
+import React from "react";
+import { Button, Popover, PopoverHead, PopoverBody } from "./src";
+
+const YourComponent = () => {
+  const [show, setShow] = React.useState(false);
+  return (
+    <>
+      {/* Uncontrolled version */}
+      <Button color="pink" id="popover-123456">
+        Uncontrolled Popover
+      </Button>
+      <Popover target="#popover-123456">
+        <PopoverHead>Uncontrolled Popover</PopoverHead>
+        <PopoverBody>
+          This is the Body of the Uncontrolled Popover, and the above is the
+          Title, man!
+        </PopoverBody>
+      </Popover>
+      <br />
+      <br />
+      {/* Controlled version */}
+      <Button color="pink" id="popover-654321" onClick={() => setShow(!show)}>
+        Controlled Popover
+      </Button>
+      <Popover
+        controlled
+        show={show}
+        placement="bottom"
+        target="#popover-654321"
+      >
+        <PopoverHead>Controlled Popover</PopoverHead>
+        <PopoverBody>
+          This is the Body of the Controlled Popover, and the above is the
+          Title, man!
+        </PopoverBody>
+      </Popover>
+    </>
+  );
+};
+
+export default YourComponent;
+```
+
+Props:
+
+```
+Popover.defaultProps = {
+  placement: "top",
+  controlled: false,
+  show: false
+};
+
+Popover.propTypes = {
+  // target is the ID of the element we want the popover to be associated to
+  target: PropTypes.string,
+  // where the Popover should be rendered
+  // NOTE: if there is no place for the popover to be rendered
+  //    on the choosen placement, PopperJS will rendered it
+  //    where it has place
+  placement: PropTypes.oneOf(["top", "bottom", "left", "right"]),
+  // if you want to controll the popover yourself
+  // and decide when to show it, and when to close it
+  // but you will still need to pass the target element
+  show: PropTypes.bool,
+  controlled: PropTypes.bool,
+  children: PropTypes.node
+};
+
+
+PopoverHead.defaultProps = {};
+
+PopoverHead.propTypes = {
+  children: PropTypes.node
+};
+
+PopoverBody.defaultProps = {};
+
+PopoverBody.propTypes = {
+  children: PropTypes.node
+};
+```
+
+### Tooltip
+
+Usage:
+
+```
+// controlled usage
+import React from "react";
+import { Button, Tooltip } from "./src";
+
+const YourComponent = () => {
+  const [show, setShow] = React.useState(false);
+  return (
+    <>
+      {/* Uncontrolled version */}
+      <Button color="pink" id="tooltip-123456">
+        Uncontrolled Tooltip
+      </Button>
+      <Tooltip target="#tooltip-123456">Uncontrolled Tooltip</Tooltip>
+      <br />
+      <br />
+      {/* Controlled version */}
+      <Button
+        color="pink"
+        id="tooltip-654321"
+        onMouseEnter={() => setShow(!show)}
+        onMouseLeave={() => setShow(!show)}
+      >
+        Controlled Tooltip
+      </Button>
+      <Tooltip
+        controlled
+        show={show}
+        placement="bottom"
+        target="#tooltip-654321"
+      >
+        Controlled Tooltip
+      </Tooltip>
+    </>
+  );
+};
+
+export default YourComponent;
+
+```
+
+Props:
+
+```
+Tooltip.defaultProps = {
+  placement: "top",
+  controlled: false,
+  show: false
+};
+
+Tooltip.propTypes = {
+  // target is the ID of the element we want the tooltip to be associated to
+  target: PropTypes.string,
+  // where the Tooltip should be rendered
+  // NOTE: if there is no place for the tooltip to be rendered
+  //    on the choosen placement, PopperJS will rendered it
+  //    where it has place
+  placement: PropTypes.oneOf(["top", "bottom", "left", "right"]),
+  // if you want to controll the tooltip yourself
+  // and decide when to show it, and when to close it
+  // but you will still need to pass the target element
+  show: PropTypes.bool,
+  controlled: PropTypes.bool,
   children: PropTypes.node
 };
 ```
