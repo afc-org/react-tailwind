@@ -439,6 +439,77 @@ PopoverBody.propTypes = {
 };
 ```
 
+### Tooltip
+
+Usage:
+
+```
+// controlled usage
+import React from "react";
+import { Button, Tooltip } from "./src";
+
+const YourComponent = () => {
+  const [show, setShow] = React.useState(false);
+  return (
+    <>
+      {/* Uncontrolled version */}
+      <Button color="pink" id="tooltip-123456">
+        Uncontrolled Tooltip
+      </Button>
+      <Tooltip target="#tooltip-123456">Uncontrolled Tooltip</Tooltip>
+      <br />
+      <br />
+      {/* Controlled version */}
+      <Button
+        color="pink"
+        id="tooltip-654321"
+        onMouseEnter={() => setShow(!show)}
+        onMouseLeave={() => setShow(!show)}
+      >
+        Controlled Tooltip
+      </Button>
+      <Tooltip
+        controlled
+        show={show}
+        placement="bottom"
+        target="#tooltip-654321"
+      >
+        Controlled Tooltip
+      </Tooltip>
+    </>
+  );
+};
+
+export default YourComponent;
+
+```
+
+Props:
+
+```
+Tooltip.defaultProps = {
+  placement: "top",
+  controlled: false,
+  show: false
+};
+
+Tooltip.propTypes = {
+  // target is the ID of the element we want the tooltip to be associated to
+  target: PropTypes.string,
+  // where the Tooltip should be rendered
+  // NOTE: if there is no place for the tooltip to be rendered
+  //    on the choosen placement, PopperJS will rendered it
+  //    where it has place
+  placement: PropTypes.oneOf(["top", "bottom", "left", "right"]),
+  // if you want to controll the tooltip yourself
+  // and decide when to show it, and when to close it
+  // but you will still need to pass the target element
+  show: PropTypes.bool,
+  controlled: PropTypes.bool,
+  children: PropTypes.node
+};
+```
+
 
 ### Styles
 
