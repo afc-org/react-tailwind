@@ -8,7 +8,7 @@
 
 Tailwindjs/react-tailwindjs is Free and Open Source. It does not change or add any CSS to the already one from TailwindCSS, It comes with code written with React as an extension to TailwindCSS for you to have dynamic components inside your app as well.
 
-### Components
+**Components**
 
 It comes with 8 dynamic components, that any website needs.
 We plan on implementing more, in the weeks to come.
