@@ -22,6 +22,10 @@ import NavbarToggler from "./NavbarToggler.js";
 import Popover from "./Popover.js";
 import PopoverHead from "./PopoverHead.js";
 import PopoverBody from "./PopoverBody.js";
+import TabContainer from "./TabContainer.js";
+import TabContent from "./TabContent.js";
+import TabItem from "./TabItem.js";
+import TabLink from "./TabLink.js";
 import Tooltip from "./Tooltip.js";
 
 export {
@@ -49,5 +53,9 @@ export {
   Popover,
   PopoverHead,
   PopoverBody,
+  TabContainer,
+  TabContent,
+  TabItem,
+  TabLink,
   Tooltip
 };
