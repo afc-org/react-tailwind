@@ -1034,7 +1034,79 @@ export default YourComponent;
 Props:
 
 ```
+TabContainer.defaultProps = {
+  color: "pink",
+  controlled: false
+};
 
+TabContainer.propTypes = {
+  // if you want to controll the behavior yourself
+  controlled: PropTypes.bool,
+  // set the background, border and text color for the tab-link
+  color: PropTypes.oneOf([
+    "black",
+    "white",
+    "gray",
+    "red",
+    "orange",
+    "yellow",
+    "green",
+    "teal",
+    "blue",
+    "indigo",
+    "purple",
+    "pink"
+  ]),
+  children: PropTypes.node
+};
+
+
+TabContent.defaultProps = {
+  active: false
+};
+
+TabContent.propTypes = {
+  show: PropTypes.bool,
+  id: PropTypes.string.isRequired,
+  children: PropTypes.node
+};
+
+
+TabItem.defaultProps = {};
+
+TabItem.propTypes = {
+  children: PropTypes.node
+};
+
+
+TabLink.defaultProps = {
+  disabled: false,
+  active: false,
+  color: "white"
+};
+
+TabLink.propTypes = {
+  disabled: PropTypes.bool,
+  active: PropTypes.bool,
+  // set the background, border and text color for the tab-link
+  color: PropTypes.oneOf([
+    "black",
+    "white",
+    "gray",
+    "red",
+    "orange",
+    "yellow",
+    "green",
+    "teal",
+    "blue",
+    "indigo",
+    "purple",
+    "pink"
+  ]),
+  // the tab-content that will be displayed by pressing this tab-link
+  target: PropTypes.string.isRequired,
+  children: PropTypes.node
+};
 ```
 
 
