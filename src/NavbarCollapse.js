@@ -26,7 +26,6 @@ class NavbarCollapse extends React.Component {
   toggleCollapse = () => {
     const { show } = this.state;
     this.setState({ show: !show });
-    console.log(show);
   };
   render() {
     const { show: stateShow } = this.state;
