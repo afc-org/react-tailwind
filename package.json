@@ -2,7 +2,7 @@
   "name": "@tailwindjs/react-tailwindjs",
   "version": "0.1.0",
   "description": "Dynamic components for Tailwindcss and ReactJS",
-  "main": "index.js",
+  "main": "./src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -29,5 +29,12 @@
   "bugs": {
     "url": "https://github.com/tailwindjs/react-tailwindjs/issues"
   },
-  "homepage": "https://github.com/tailwindjs/react-tailwindjs#readme"
+  "homepage": "https://github.com/tailwindjs/react-tailwindjs#readme",
+  "peerDependencies": {
+    "@popperjs/core": "2.2.x",
+    "classnames": "2.2.x",
+    "prop-types": "15.7.x",
+    "react": "16.13.x",
+    "tailwindcss": "1.2.x"
+  }
 }
