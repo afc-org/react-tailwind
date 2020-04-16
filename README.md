@@ -42,7 +42,7 @@ We plan on implementing more, in the weeks to come.
 - [Navbar](#navbar)
 - [Popover](#popover)
 - [Tooltip](#tooltip)
-- Tab Pills
+- [Tab Pills](#tab-pills)
 
 ## Quick start
 
@@ -498,7 +498,7 @@ import {
   NavbarLink,
   NavbarNav,
   NavbarToggler
-} from "./src";
+} from "@tailwindjs/react-tailwindjs";
 
 const YourComponent = () => {
   return (
@@ -541,7 +541,7 @@ import {
   NavbarLink,
   NavbarNav,
   NavbarToggler
-} from "./src";
+} from "@tailwindjs/react-tailwindjs";
 
 const YourComponent = () => {
   const [show, setShow] = React.useState(false);
@@ -840,6 +840,201 @@ Tooltip.propTypes = {
   controlled: PropTypes.bool,
   children: PropTypes.node
 };
+```
+
+### Tab Pills
+
+Usage:
+
+```
+// uncontrolled version
+import React from "react";
+import { TabContainer, TabItem, TabLink, TabContent } from "@tailwindjs/react-tailwindjs";
+
+const YourComponent = () => {
+  return (
+    <>
+      <TabContainer color="pink">
+        <TabItem>
+          <TabLink target="#tab-id-1">Simple</TabLink>
+        </TabItem>
+        <TabItem>
+          <TabLink target="#tab-id-2" active>
+            Active
+          </TabLink>
+        </TabItem>
+        <TabItem>
+          <TabLink target="#tab-id-3">Simple</TabLink>
+        </TabItem>
+        <TabItem>
+          <TabLink target="#tab-id-4" disabled>
+            Disabled
+          </TabLink>
+        </TabItem>
+      </TabContainer>
+      <TabContent id="tab-id-1">
+        <p>
+          Collaboratively administrate empowered markets via plug-and-play
+          networks. Dynamically procrastinate B2C users after installed base
+          benefits.
+        </p>
+        <p>
+          Dramatically visualize customer directed convergence without
+          revolutionary ROI.
+        </p>
+      </TabContent>
+      <TabContent id="tab-id-2">
+        <p>
+          Completely synergize resource taxing relationships via premier niche
+          markets. Professionally cultivate one-to-one customer service with
+          robust ideas.
+        </p>
+        <p>
+          Efficiently unleash cross-media information without cross-media value.
+          Quickly maximize timely deliverables for real-time schemas.
+        </p>
+      </TabContent>
+      <TabContent id="tab-id-3">
+        <p>
+          Efficiently unleash cross-media information without cross-media value.
+          Quickly maximize timely deliverables for real-time schemas.
+        </p>
+        <p>
+          Dramatically maintain clicks-and-mortar solutions without functional
+          solutions.
+        </p>
+      </TabContent>
+      <TabContent id="tab-id-4">
+        <p>
+          Completely synergize resource taxing relationships via premier niche
+          markets. Professionally cultivate one-to-one customer service with
+          robust ideas.
+        </p>
+        <p>
+          Efficiently unleash cross-media information without cross-media value.
+          Quickly maximize timely deliverables for real-time schemas.
+        </p>
+      </TabContent>
+    </>
+  );
+};
+
+export default YourComponent;
+```
+
+```
+// controlled version
+// on the controlled version you will have to send the color
+// of each tab-link individualy, the color from the tab-container
+// will no longer be applied :(
+import React from "react";
+import { TabContainer, TabItem, TabLink, TabContent } from "@tailwindjs/react-tailwindjs";
+
+const YourComponent = () => {
+  const [active, setActive] = React.useState("tab-id-2");
+  const toggleActiveTab = tab => {
+    setActive(tab);
+  };
+  return (
+    <>
+      {/* the color on the container does nothing on the controlled version */}
+      <TabContainer controlled color="blue">
+        <TabItem>
+          <TabLink
+            color="pink"
+            target="#tab-id-1"
+            active={active === "tab-id-1"}
+            onClick={() => toggleActiveTab("tab-id-1")}
+          >
+            Simple
+          </TabLink>
+        </TabItem>
+        <TabItem>
+          <TabLink
+            color="pink"
+            target="#tab-id-2"
+            active={active === "tab-id-2"}
+            onClick={() => toggleActiveTab("tab-id-2")}
+          >
+            Active
+          </TabLink>
+        </TabItem>
+        <TabItem>
+          <TabLink
+            color="pink"
+            target="#tab-id-3"
+            active={active === "tab-id-3"}
+            onClick={() => toggleActiveTab("tab-id-3")}
+          >
+            Simple
+          </TabLink>
+        </TabItem>
+        <TabItem>
+          <TabLink
+            color="pink"
+            target="#tab-id-4"
+            disabled
+            active={active === "tab-id-4"}
+            onClick={() => toggleActiveTab("tab-id-4")}
+          >
+            Disabled
+          </TabLink>
+        </TabItem>
+      </TabContainer>
+      <TabContent id="tab-id-1" active={active === "tab-id-1"}>
+        <p>
+          Collaboratively administrate empowered markets via plug-and-play
+          networks. Dynamically procrastinate B2C users after installed base
+          benefits.
+        </p>
+        <p>
+          Dramatically visualize customer directed convergence without
+          revolutionary ROI.
+        </p>
+      </TabContent>
+      <TabContent id="tab-id-2" active={active === "tab-id-2"}>
+        <p>
+          Completely synergize resource taxing relationships via premier niche
+          markets. Professionally cultivate one-to-one customer service with
+          robust ideas.
+        </p>
+        <p>
+          Efficiently unleash cross-media information without cross-media value.
+          Quickly maximize timely deliverables for real-time schemas.
+        </p>
+      </TabContent>
+      <TabContent id="tab-id-3" active={active === "tab-id-3"}>
+        <p>
+          Efficiently unleash cross-media information without cross-media value.
+          Quickly maximize timely deliverables for real-time schemas.
+        </p>
+        <p>
+          Dramatically maintain clicks-and-mortar solutions without functional
+          solutions.
+        </p>
+      </TabContent>
+      <TabContent id="tab-id-4" active={active === "tab-id-4"}>
+        <p>
+          Completely synergize resource taxing relationships via premier niche
+          markets. Professionally cultivate one-to-one customer service with
+          robust ideas.
+        </p>
+        <p>
+          Efficiently unleash cross-media information without cross-media value.
+          Quickly maximize timely deliverables for real-time schemas.
+        </p>
+      </TabContent>
+    </>
+  );
+};
+
+export default YourComponent;
+```
+
+Props:
+
+```
+
 ```
 
 
