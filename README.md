@@ -1,12 +1,12 @@
-# Tailwindjs/react-tailwindjs
+# @afc/react-tailwind
 
-![version](https://img.shields.io/badge/version-0.1.0-blue.svg) ![license](https://img.shields.io/badge/license-MIT-blue.svg) <a href="https://github.com/tailwindjs/react-tailwindjs/issues?q=is%3Aopen+is%3Aissue" target="_blank">![GitHub issues open](https://img.shields.io/github/issues/tailwindjs/react-tailwindjs.svg)</a> <a href="https://github.com/tailwindjs/react-tailwindjs?q=is%3Aissue+is%3Aclosed" target="_blank">![GitHub issues closed](https://img.shields.io/github/issues-closed-raw/tailwindjs/react-tailwindjs.svg)</a>
+![version](https://img.shields.io/badge/version-0.1.0-blue.svg) ![license](https://img.shields.io/badge/license-MIT-blue.svg) <a href="https://github.com/afc-org/react-tailwind/issues?q=is%3Aopen+is%3Aissue" target="_blank">![GitHub issues open](https://img.shields.io/github/issues/@afc/react-tailwind.svg)</a> <a href="https://github.com/afc-org/react-tailwind?q=is%3Aissue+is%3Aclosed" target="_blank">![GitHub issues closed](https://img.shields.io/github/issues-closed-raw/@afc/react-tailwind.svg)</a>
 
-![tailwindjs/react-tailwindjs]({{--logo-image-here--}})
+<div align="center"><img src="./assets/logos/reactjs-tailwind-logo.png" alt="@afc/react-tailwind" width="300"/></div>
 
 ### A dynamic plugin extension for TailwindCSS.
 
-Tailwindjs/react-tailwindjs is Free and Open Source. It does not change or add any CSS to the already one from TailwindCSS, It comes with code written with React as an extension to TailwindCSS for you to have dynamic components inside your app as well.
+@afc/react-tailwind is Free and Open Source. It does not change or add any CSS to the already one from TailwindCSS, It comes with code written with React as an extension to TailwindCSS for you to have dynamic components inside your app as well.
 
 **Components**
 
@@ -28,9 +28,9 @@ We plan on implementing more, in the weeks to come.
 
 ## Versions
 
-|Angular|JavaScript|React|VueJS|Svelte|
+|Angular|JavaScript|React|Svelte|VueJS|
 | --- | --- | --- | --- | --- |
-| <a href="https://github.com/tailwindjs/angular-tailwindjs" target="_blank">Check Angular</a>  | <a href="https://github.com/tailwindjs/tailwindjs" target="_blank">Check JavaScript</a>  | <a href="https://github.com/tailwindjs/react-tailwindjs" target="_blank">Check React</a>  | <a href="https://github.com/tailwindjs/vue-tailwindjs" target="_blank">Check VueJS</a>  | <a href="https://github.com/tailwindjs/svelte-tailwindjs" target="_blank">Check Svelte</a>  |
+| <a href="https://github.com/afc-org/angular-tailwind" target="_blank">![Check Angular](./assets/logos/angular-tailwind-logo.png)</a>  | <a href="https://github.com/afc-org/js-tailwind" target="_blank">![Check JavaScript](./assets/logos/javascript-tailwind-logo.png)</a>  | <a href="https://github.com/afc-org/react-tailwind" target="_blank">![Check React](./assets/logos/reactjs-tailwind-logo.png)</a>  | <a href="https://github.com/afc-org/svelte-tailwind" target="_blank">![Check Svelte](./assets/logos/svelte-tailwind-logo.png)</a>    | <a href="https://github.com/afc-org/vue-tailwind" target="_blank">![Check VueJS](./assets/logos/vuejs-tailwind-logo.png)</a>|
 
 ## Components
 
@@ -47,12 +47,12 @@ We plan on implementing more, in the weeks to come.
 ## Quick start
 
 ```
-npm i -E @tailwindjs/react-tailwindjs
+npm i -E @afc/react-tailwind
 ```
 
 ## Documentation - React
 
-After you have installed `@tailwindjs/react-tailwindjs` into your project, you can import and use our components like so:
+After you have installed `@afc/react-tailwind` into your project, you can import and use our components like so:
 
 ### Alert
 
@@ -62,9 +62,9 @@ Usage:
 // with closing button
 
 import React from "react";
-import { Alert } from "@tailwindjs/react-tailwindjs";
+import { Alert } from "@afc/react-tailwind";
 // or direct import
-// import Alert from "@tailwindjs/react-tailwindjs/Alert";
+// import Alert from "@afc/react-tailwind/Alert";
 
 // With Function Components (hooks)
 export default function YourFunctionName() {
@@ -92,9 +92,9 @@ export default function YourFunctionName() {
 // this means, that you can controll whether the Alert is shown or not
 
 import React from "react";
-import { Alert } from "@tailwindjs/react-tailwindjs";
+import { Alert } from "@afc/react-tailwind";
 // or direct import
-// import Alert from "@tailwindjs/react-tailwindjs/src/Alert";
+// import Alert from "@afc/react-tailwind/src/Alert";
 
 // With Function Components (hooks)
 export default function YourFunctionName() {
@@ -159,7 +159,7 @@ Usage:
 
 ```
 import React from "react";
-import { Button } from "@tailwindjs/react-tailwindjs";
+import { Button } from "@afc/react-tailwind";
 
 // With Function Components (hooks)
 export default function YourFunctionName() {
@@ -210,7 +210,7 @@ import {
   DropdownToggle,
   DropdownMenu,
   DropdownItem
-} from "@tailwindjs/react-tailwindjs";
+} from "@afc/react-tailwind";
 
 const YourComponent = () => {
   return (
@@ -237,7 +237,7 @@ import {
   DropdownToggle,
   DropdownMenu,
   DropdownItem
-} from "@tailwindjs/react-tailwindjs";
+} from "@afc/react-tailwind";
 
 const YourComponent = () => {
   const [show,setShow] = React.useState(false);
@@ -371,7 +371,7 @@ import {
   ModalFooter,
   ModalHead,
   ModalTitle
-} from "@tailwindjs/react-tailwindjs";
+} from "@afc/react-tailwind";
 
 const YourComponent = () => {
   const [show, setShow] = React.useState(false);
@@ -498,7 +498,7 @@ import {
   NavbarLink,
   NavbarNav,
   NavbarToggler
-} from "@tailwindjs/react-tailwindjs";
+} from "@afc/react-tailwind";
 
 const YourComponent = () => {
   return (
@@ -541,7 +541,7 @@ import {
   NavbarLink,
   NavbarNav,
   NavbarToggler
-} from "@tailwindjs/react-tailwindjs";
+} from "@afc/react-tailwind";
 
 const YourComponent = () => {
   const [show, setShow] = React.useState(false);
@@ -690,7 +690,7 @@ Usage:
 ```
 // controlled usage
 import React from "react";
-import { Button, Popover, PopoverHead, PopoverBody } from "@tailwindjs/react-tailwindjs";
+import { Button, Popover, PopoverHead, PopoverBody } from "@afc/react-tailwind";
 
 const YourComponent = () => {
   const [show, setShow] = React.useState(false);
@@ -778,7 +778,7 @@ Usage:
 ```
 // controlled usage
 import React from "react";
-import { Button, Tooltip } from "@tailwindjs/react-tailwindjs";
+import { Button, Tooltip } from "@afc/react-tailwind";
 
 const YourComponent = () => {
   const [show, setShow] = React.useState(false);
@@ -849,7 +849,7 @@ Usage:
 ```
 // uncontrolled version
 import React from "react";
-import { TabContainer, TabItem, TabLink, TabContent } from "@tailwindjs/react-tailwindjs";
+import { TabContainer, TabItem, TabLink, TabContent } from "@afc/react-tailwind";
 
 const YourComponent = () => {
   return (
@@ -928,7 +928,7 @@ export default YourComponent;
 // of each tab-link individualy, the color from the tab-container
 // will no longer be applied :(
 import React from "react";
-import { TabContainer, TabItem, TabLink, TabContent } from "@tailwindjs/react-tailwindjs";
+import { TabContainer, TabItem, TabLink, TabContent } from "@afc/react-tailwind";
 
 const YourComponent = () => {
   const [active, setActive] = React.useState("tab-id-2");
@@ -1128,7 +1128,7 @@ import "path/to/your/tailwindcss/compiled/styles.css";
 
 ## Dependencies
 
-**@tailwindjs/react-tailwindjs** to properly work needs the following dependencies:
+**@afc/react-tailwind** to properly work needs the following dependencies:
 - **@popperjs/core**@2.2.1
 - **react**@16.13.1
 - **react-dom**@16.13.1
@@ -1142,31 +1142,31 @@ At present, we officially aim to support the last two versions of the following 
 
 | Chrome | Firefox | Edge | Safari | Opera |
 |:---:|:---:|:---:|:---:|:---:|
-| <img src="https://github.com/tailwindjs/react-tailwindjs/blob/master/assets/logos/chrome-logo.png?raw=true" width="64" height="64"> | <img src="https://github.com/tailwindjs/react-tailwindjs/blob/master/assets/logos/firefox-logo.png?raw=true" width="64" height="64"> | <img src="https://github.com/tailwindjs/react-tailwindjs/blob/master/assets/logos/edge-logo.png?raw=true" width="64" height="64"> | <img src="https://github.com/tailwindjs/react-tailwindjs/blob/master/assets/logos/safari-logo.png?raw=true" width="64" height="64"> | <img src="https://github.com/tailwindjs/react-tailwindjs/blob/master/assets/logos/opera-logo.png?raw=true" width="64" height="64"> |
+| <img src="./assets/logos/chrome-logo.png" width="64" height="64"> | <img src="./assets/logos/firefox-logo.png" width="64" height="64"> | <img src="./assets/logos/edge-logo.png" width="64" height="64"> | <img src="./assets/logos/safari-logo.png" width="64" height="64"> | <img src="./assets/logos/opera-logo.png" width="64" height="64"> |
 
 ## Reporting Issues
 
 We use GitHub Issues as the official bug tracker for the Angular Landing Page. Here are some advices for our users that want to report an issue:
 
-1. Make sure that you are using the latest version of the @tailwindjs/react-tailwindjs.
+1. Make sure that you are using the latest version of the @afc/react-tailwind.
 2. Providing us reproducible steps for the issue will shorten the time it takes for it to be fixed.
 3. Some issues may be browser specific, so specifying in what browser you encountered the issue might help.
 
 ## Contributors
 This project exists thanks to all the people who contribute. [[Contribute](CONTRIBUTING.md)].
-<a href="https://github.com/tailwindjs/react-tailwindjs/contributors"><img src="https://opencollective.com/tailwindjs/contributors.svg?width=890&button=false" /></a>
+
 
 ## Licensing
 
-- Copyright 2020 Tailwindjs/react-tailwindjs
+- Copyright 2020 @afc/react-tailwind
 
-- Licensed under <a href="https://github.com/tailwindjs/react-tailwind/blob/master/LICENSE.md" target="_blank">MIT</a>
+- Licensed under <a href="https://github.com/afc-org/react-tailwind/blob/master/LICENSE.md" target="_blank">MIT</a>
 
 ## Resources
-- Tailwindjs projects: <a href="https://github.com/tailwindjs/" target="_blank">https://github.com/tailwindjs/</a>
-- JavaScript & TailwindCSS: <a href="https://github.com/tailwindjs/tailwindjs" target="_blank">https://github.com/tailwindjs/tailwindjs</a>
-- Angular & TailwindCSS: <a href="https://github.com/tailwindjs/angular-tailwindjs" target="_blank">https://github.com/tailwindjs/angular-tailwindjs</a>
-- React & TailwindCSS: <a href="https://github.com/tailwindjs/angular-tailwindjs" target="_blank">https://github.com/tailwindjs/react-tailwindjs</a>
-- Svelte & TailwindCSS: <a href="https://github.com/tailwindjs/angular-tailwindjs" target="_blank">https://github.com/tailwindjs/svelte-tailwindjs</a>
-- VueJS & TailwindCSS:  <a href="https://github.com/tailwindjs/angular-tailwindjs" target="_blank">https://github.com/tailwindjs/vue-tailwindjs</a>
-- Issues: <a href="https://github.com/tailwindjs/react-tailwindjs/issues" target="_blank">Github Issues Page</a>
+- AFC-ORG projects: <a href="https://github.com/afc-org/" target="_blank">https://github.com/afc-org/</a>
+- JavaScript & TailwindCSS: <a href="https://github.com/afc-org/js-tailwind" target="_blank">https://github.com/afc-org/js-tailwind</a>
+- Angular & TailwindCSS: <a href="https://github.com/afc-org/angular-tailwind" target="_blank">https://github.com/afc-org/angular-tailwind</a>
+- React & TailwindCSS: <a href="https://github.com/afc-org/angular-tailwind" target="_blank">https://github.com/afc-org/react-tailwind</a>
+- Svelte & TailwindCSS: <a href="https://github.com/afc-org/angular-tailwind" target="_blank">https://github.com/afc-org/svelte-tailwind</a>
+- VueJS & TailwindCSS:  <a href="https://github.com/afc-org/angular-tailwind" target="_blank">https://github.com/afc-org/vue-tailwind</a>
+- Issues: <a href="https://github.com/afc-org/react-tailwind/issues" target="_blank">Github Issues Page</a>
