@@ -1,5 +1,5 @@
 {
-  "name": "@tailwindjs/react-tailwindjs",
+  "name": "@afc/react-tailwind",
   "version": "0.1.0",
   "description": "Dynamic components for Tailwindcss and ReactJS",
   "main": "./src/index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tailwindjs/react-tailwindjs.git"
+    "url": "git+https://github.com/afc-org/react-tailwind.git"
   },
   "keywords": [
     "react",
@@ -22,14 +22,17 @@
     "react-tailwind",
     "react-tailwindcss",
     "react-tailwindjs",
-    "tailwindjs"
+    "tailwindjs",
+    "afc-org",
+    "afc",
+    "@afc"
   ],
-  "author": "@tailwindjs",
+  "author": "afc-org",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/tailwindjs/react-tailwindjs/issues"
+    "url": "https://github.com/afc-org/react-tailwind/issues"
   },
-  "homepage": "https://github.com/tailwindjs/react-tailwindjs#readme",
+  "homepage": "https://github.com/afc-org/react-tailwind#readme",
   "peerDependencies": {
     "@popperjs/core": "2.2.x",
     "classnames": "2.2.x",
