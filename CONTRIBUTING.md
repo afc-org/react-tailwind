@@ -16,7 +16,7 @@ Please feel free to take on any issue that's currently open. Just send a comment
 
 ## Submitting a pull request
 
-**@afc/react-tailwind** is an open-source project, so pull requests are always welcomed (_always_ ❤️).
+**@afc-org/react-tailwind** is an open-source project, so pull requests are always welcomed (_always_ ❤️).
 What we ask you, is that before working on a large change, it is best to open an issue first to discuss it with the maintainers or if an issue was already opened, comment your intention of opening up a PR.
 
 When in doubt, keep your pull requests small. To give a PR the best chance of getting accepted, don't bundle more than one feature or bug fix per pull request. It's always best to create two smaller PRs than one big one.
@@ -78,5 +78,5 @@ Closes #12
 ## Branches explained
 
 As you can see we have multiple branches:
- - **master**: This branch stores the latest stable version of @afc/react-tailwind.
- - **dev-master**: This is the **development** branch of @afc/react-tailwind, and this is where everything is happening before releasing on master
+ - **master**: This branch stores the latest stable version of @afc-org/react-tailwind.
+ - **dev-master**: This is the **development** branch of @afc-org/react-tailwind, and this is where everything is happening before releasing on master
