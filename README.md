@@ -1,6 +1,6 @@
 # @afc-org/react-tailwind
 
-![version](https://img.shields.io/badge/version-0.1.0-blue.svg) ![license](https://img.shields.io/badge/license-MIT-blue.svg) <a href="https://github.com/afc-org/react-tailwind/issues?q=is%3Aopen+is%3Aissue" target="_blank">![GitHub issues open](https://img.shields.io/github/issues/@afc-org/react-tailwind.svg)</a> <a href="https://github.com/afc-org/react-tailwind?q=is%3Aissue+is%3Aclosed" target="_blank">![GitHub issues closed](https://img.shields.io/github/issues-closed-raw/@afc-org/react-tailwind.svg)</a>
+![version](https://img.shields.io/badge/version-0.1.1-blue.svg) ![license](https://img.shields.io/badge/license-MIT-blue.svg) <a href="https://github.com/afc-org/react-tailwind/issues?q=is%3Aopen+is%3Aissue" target="_blank">![GitHub issues open](https://img.shields.io/github/issues/@afc-org/react-tailwind.svg)</a> <a href="https://github.com/afc-org/react-tailwind?q=is%3Aissue+is%3Aclosed" target="_blank">![GitHub issues closed](https://img.shields.io/github/issues-closed-raw/@afc-org/react-tailwind.svg)</a>
 
 <div align="center"><img src="./assets/logos/reactjs-tailwind-logo.png" alt="@afc-org/react-tailwind" width="300"/></div>
 

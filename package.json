@@ -1,6 +1,6 @@
 {
   "name": "@afc-org/react-tailwind",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Dynamic components for Tailwindcss and ReactJS",
   "main": "./dist/index.js",
   "scripts": {
